@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import AtomTestPage from './tests/AtomTestPage'
+//import AtomTestPage from './tests/AtomTestPage'
 import ChatPage from './components/pages/ChatPage'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
     <ChatPage />
-    <AtomTestPage />
+    {/* <AtomTestPage /> */}
     </>
   )
 }

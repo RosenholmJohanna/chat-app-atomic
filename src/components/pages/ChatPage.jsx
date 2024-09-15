@@ -3,12 +3,15 @@ import ChatTemplate from "../templates/ChatTemplate";
 import { mockConversations, mockMessages, mockUsers } from "../../data/mockData";
 
 const ChatPage = () => {
-   // const [selectedConversationId, setSelectedConversationId] = useState(null);
+    const [selectedConversationId, setSelectedConversationId] = useState(null);
    const [messages, setMessages] = useState([]);
-    //const [conversations] = useState(mockConversations);
+    const [conversations] = useState(mockConversations);
     const user = mockUsers[0];
 
-   
+    const handleConversationSelect = (convoId) => {
+        setSelectedConversationId(convoId);
+        setMessages(mockMessages[convoId] || []);
+      };
 
     const handleMessageSubmit = (newMessageText) => {
         const newMessage = {
@@ -24,8 +27,11 @@ const ChatPage = () => {
     <>
     <h1>Chat Page</h1>
     <ChatTemplate 
+    selectedConversationId={selectedConversationId}
     messages={messages}
     onMessageSubmit={handleMessageSubmit}
+    conversations = {conversations}
+    onConversationSelect={handleConversationSelect}
     />
     </>
   );
