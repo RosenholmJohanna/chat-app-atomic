@@ -18,7 +18,7 @@ const ChatPage = () => {
           id: Date.now().toString(),
           text: newMessageText,
           userId: user.id,
-          createdAt: new Date().toISOString(),
+          createdAt: new Date().toISOString().slice(0, 10),
         };
         setMessages((prevMessages) => [...prevMessages, newMessage]);
       };
