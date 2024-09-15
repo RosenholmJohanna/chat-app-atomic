@@ -4,7 +4,7 @@ import { mockConversations, mockMessages, mockUsers } from "../../data/mockData"
 
 const ChatPage = () => {
     const [selectedConversationId, setSelectedConversationId] = useState(null);
-   const [messages, setMessages] = useState([]);
+    const [messages, setMessages] = useState([]);
     const [conversations] = useState(mockConversations);
     const user = mockUsers[0];
 

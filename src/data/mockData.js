@@ -8,12 +8,16 @@ export const mockUsers = [
 export const mockConversations = [
     { convoId: "1", lastMessage: { text: "Hello from conversation 1", userId: 1 } },
     { convoId: "2", lastMessage: { text: "Hey, this is conversation 2", userId: 2 } },
+    { convoId: "3", lastMessage: { text: "Hello from conversation 3", userId: 3 } },
+    { convoId: "4", lastMessage: { text: "Hey, this is conversation 4", userId: 1 } },
   ];
   
   export const mockMessages = {
     1: [
       { id: "1", text: "Hi there!", userId: 1, createdAt: "2024-01-01" },
       { id: "2", text: "Hello!", userId: 2, createdAt: "2024-01-02" },
+      { id: "3", text: "How are you doing?", userId: 2, createdAt: "2024-01-02" },
+      { id: "4", text: "Im good! And you?", userId: 1, createdAt: "2024-01-02" },
     ],
     2: [
       { id: "3", text: "How are you?", userId: 1, createdAt: "2024-01-03" },
